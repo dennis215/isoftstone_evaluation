@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="checkout_system.js" async></script>
+</head>
+<body>
+
+<h2>Welcome</h2>
+<label id="membership">Choose membership:</label>
+<select name="membership" id="membership" onchange="selectMember(this.value)">
+    <option>No Membership</option>
+    <option value="associate">Associate</option>
+    <option value="diamond">Diamond</option>
+  </select>
+<p id="discount"></p>
+<h3 id="kone_des"></h3>
+<label >Number to purchase:</label>
+<input type="number" id="kone" name="kone" min=0 onchange="updateKoneNumber(this.value)"><br><br>
+<h3 id="ironhide_des"></h3>
+<label >Number to purchase:</label>
+<input type="number" id="ironhide_cartridge" min=0 name="ironhide_cartridge" onchange="updateIronhideNumber(this.value)"><br><br>
+
+<button id=checkout type="button" onclick="checkout()">Checkout</button>
+
+<p id="summary"></p>
+<p id="total"></p>
+
+</body>
+</html> 
+
